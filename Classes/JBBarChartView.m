@@ -531,6 +531,9 @@ static UIColor *kJBBarChartViewDefaultBarColor = nil;
         [self setVerticalSelectionViewVisible:NO animated:YES];
         return;
     }
+    
+    [self.delegate lockScrollView];
+    
     CGRect barViewFrame = barView.frame;
     CGRect selectionViewFrame = self.verticalSelectionView.frame;
     selectionViewFrame.origin.x = barViewFrame.origin.x;
@@ -572,6 +575,8 @@ static UIColor *kJBBarChartViewDefaultBarColor = nil;
     {
         return;
     }
+    
+    [self.delegate unlockScrollView];
     
     [self setVerticalSelectionViewVisible:NO animated:YES];
     
