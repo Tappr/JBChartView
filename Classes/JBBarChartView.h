@@ -113,6 +113,11 @@
  */
 - (CGFloat)barPaddingForBarChartView:(JBBarChartView *)barChartView;
 
+
+- (void)lockScrollView;
+- (void)unlockScrollView;
+
+
 @end
 
 @interface JBBarChartView : JBChartView
